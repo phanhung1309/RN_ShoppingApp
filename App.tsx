@@ -1,11 +1,15 @@
 import React from 'react';
 import {StyleSheet, Text, SafeAreaView} from 'react-native';
+import {Provider} from 'react-redux';
+import store from './store';
 
 const App: React.FC = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Page content</Text>
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={styles.container}>
+        <Text>Page content</Text>
+      </SafeAreaView>
+    </Provider>
   );
 };
 
